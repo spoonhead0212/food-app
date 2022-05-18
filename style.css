@@ -1,0 +1,680 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --fontFam: 'Varela Round', sans-serif;
+    --orangeColor: #dc2f02;
+    --lightfray: #22223b;
+    --darkColor: #202020;
+    --darkwhite: #feeafa;
+    --overallBg: #a6a8a7;
+    --phoneBg: #F4E9CD;
+    --boxShadowFood:rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    --arrowSize: 40px;
+    --buttonBoxShadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+body {
+    font-family: var(--fontFam);
+}
+
+h2 {
+    font-weight: 900;
+    color: --darkColor;
+    margin-top: 2rem;
+    margin-bottom: .8rem;
+}
+
+main {
+    width: 100vw;
+    background-color: var(--overallBg);
+    padding: 2%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    border: 10px solid black;
+}
+
+.phone {
+    position: relative;
+    z-index: 999;
+    width: 300px;
+    height: 550px;
+    border-radius: 15px;
+    background-color: var(--phoneBg);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.screen {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+     width: 300px;
+    height: 550px;
+    text-align: center;
+    padding-top: 5rem;
+    border-radius: 15px;
+    background-color: rgb(255,255,255, .6);
+}
+
+.screen-icon img {
+    width: 180px;
+    margin-bottom: 1rem;
+}
+
+.second img {
+    max-width: 100%;
+}
+
+.screen p {
+    font-size: 13px;
+    padding-inline: 3rem;
+    color: var(--lightfray);
+    margin-bottom: 2rem;
+}
+
+.fa-arrow-circle-right {
+    color: var(--orangeColor);
+    font-size: var(--arrowSize);
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+
+.circle-1 {
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(255,69,0, .4);
+    padding: 2.5rem;
+    border-radius: 50%;
+    top: 5%;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.circle-2 {
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: var(--orangeColor);
+    padding: 4rem;
+    background-color: rgb(255,69,0, .4);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    padding-inline: .8rem;
+}
+
+.top img {
+    width: 16px;
+}
+
+.fa-shopping-cart,
+.fa-chevron-left {
+    align-self: center;
+    color: var(--lightfray);
+    background-color: white;
+    padding: 4.5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sea {
+    position: relative;
+}
+
+.sea img {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+}
+
+#search {
+    padding: .3rem;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.food-container {
+    margin-inline: auto;
+    margin-block: 1rem;
+    width: 280px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--phoneBg);
+    grid-gap: 15px;
+    border-radius: 15px;
+    box-shadow:var(--boxShadowFood)
+}
+
+.details {
+    padding-block: .4rem;
+}
+
+.food-container-img img {
+    max-width: 100%;
+    min-height: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.details h5{
+    line-height: 1.2rem;
+}
+
+.details p {
+    color: var(--lightfray);
+    font-size: 12px;
+    margin-block: .4rem;
+}
+
+.rate-time-but {
+    margin-top: .5rem;
+}
+
+.rating,
+.time {
+    font-size: 10px;
+    margin-block: 1rem;
+    color: var(--lightfray);
+}
+
+.rating {
+    margin-right: .2rem;
+}
+
+.fa-star {
+    color: rgb(255, 217, 0);
+}
+.fa-stopwatch {
+    color: red;
+}
+
+.buy {
+    font-family: var(--fontFam);
+    background-color: var(--orangeColor);
+    padding: .2rem .7rem;
+    border: none;
+    border-radius: 11px;
+    letter-spacing: 1px;
+    margin-block: .5rem;
+    box-shadow: var(--buttonBoxShadow);
+}
+
+.buy a {
+    color: white;
+    text-decoration: none;
+}
+
+.asian {
+    width: 280px;
+    margin: auto;
+}
+
+.asian input {
+    font-family: var(--fontFam);
+    margin-top: 1rem;
+    width: 85%;
+    padding: .5rem;
+    border-radius: 5px;
+    border: none
+}
+
+.food-search {
+    background-color: var(--orangeColor);
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-left: .2rem;
+    cursor: pointer;
+}
+
+.options {
+    width: 280px;
+    margin-inline: auto;
+}
+
+.options button{
+    padding: .5rem 1rem;
+    margin-block: 1rem;
+    font-family: var(--fontFam);
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    width: 49%;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: var(--orangeColor);
+    color: white;
+}
+
+.mc-donalds {
+    width: 280px;
+    margin-inline: auto;
+    box-shadow: var(--boxShadowFood);
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.mc-donalds h2 {
+    margin: unset;
+    padding-block: .5rem;
+}
+
+.donald-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80px 80px;
+    grid-gap: 5px;
+}
+
+.donald-grid-1 {
+    grid-row: 1 / -1;
+}
+
+.foodie {
+    border-radius: 10px;
+}
+
+.foodie img {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.category h3 {
+    padding: 15px 10px;
+}
+
+.category:hover {
+    background-color: var(--orangeColor);
+    color: white;
+}
+
+.burger-king {
+    width: 100%;
+    margin-inline: auto;
+}
+
+.burger-king-logo {
+    position: relative;
+}
+
+.burger-king img {
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+    border-radius: 6% 9% 50% 50% / 7% 5% 10% 10% ;
+}
+
+.burg {
+    width: 280px;
+    background-color: white;
+    margin-top: -2rem;
+    z-index: 2;
+    position: relative;
+    margin-inline: auto;
+    border-radius: 15px;
+    box-shadow: var(--boxShadowFood);
+}
+
+.fa-bookmark {
+    background-color: var(--orangeColor);
+    color: white;
+    padding: 6px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+}
+
+.burger-king-logo img {
+    position: absolute;
+    margin-top: -.8rem;
+    left: 40%;
+    width: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+}
+
+.king {
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+.king h3 {
+    padding-bottom: .5rem;
+}
+
+.king p {
+    color: var(--overallBg);
+    font-size: 13px;
+    padding-inline: 2rem;
+}
+
+.fa-truck {
+    color: var(--orangeColor);
+}
+
+.rating-deli {
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: .5rem;
+    color: var(--lightfray);
+}
+
+.it {
+    color: var(--overallBg);
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem;
+}
+
+.it small {
+    background-color: var(--overallBg);
+    font-size: 8px;
+    color: white;
+    padding: .2rem .38rem;
+    border-radius: 12px;
+}
+
+.opt {
+    text-align: center;
+}
+
+.opt button {
+    font-family: var(--fontFam);
+    color: black;
+    background-color: white;
+    border: none;
+    padding: .5rem 1.8rem;
+    border-radius: 25px;
+    margin-block: 1rem;
+    box-shadow: var(--buttonBoxShadow);
+}
+
+.opt button:hover {
+    background-color: var(--orangeColor);
+    color: white;
+    cursor: pointer;
+}
+
+.wrap-popular {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    margin-inline: auto;
+    margin-block: .3rem;
+}
+
+.wrap-popular > small a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+}
+
+.wrap-popular > small a:visited {
+   color: var(--darkColor);
+}
+
+.pop-food-wrap {
+    width: 280px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: auto;
+    grid-gap: 10px;
+}
+
+.pop-food {
+    text-align: center;
+    position: relative;
+}
+
+.pop-food img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.pop-food button {
+    background-color: var(--orangeColor);
+    color: white;
+    font-family: var(--fontFam);
+    border: none;
+    border-radius: 10px ;
+    padding: .2rem .5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: -9px;
+    right: 30%;
+    box-shadow: var(--buttonBoxShadow);
+}
+
+.pop-food .fa-heart {
+    color: var(--overallBg);
+    font-size: 10px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+}
+
+.pop-food >.fa-heart:hover {
+    background-color: var(--orangeColor);
+    cursor: pointer;
+    color: white;
+}
+
+.profile {
+    background-color: white;
+    align-self: center;
+    padding: .2rem .4rem;
+    border-radius: 5px;
+}
+
+.profile-content {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.profile-content img {
+    width: 100px;
+}
+
+.profile-content h4 {
+    margin-top: .5rem;
+}
+
+.profile-content p {
+    margin-block: .5rem;
+    padding-inline: 3rem;
+    line-height: 1rem;
+    color: var(--lightfray);
+    font-size: 13px;
+}
+
+.edit {
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.fa-tags {
+    color: var(--orangeColor);
+}
+
+.pro-set button {
+    padding-inline: 2.65rem;
+}
+
+
+.food-wrap-pro {
+    margin-top: 1rem;
+}
+
+.pop-food-pro {
+    text-align: start;
+    background-color: white;
+    border-radius: 15px 15px 10px 10px;
+    box-shadow: var(--boxShadowFood);
+}
+
+.pop-food-pro h6 {
+    margin-bottom: .3rem;
+    padding-left: .4rem;
+}
+
+.price {
+    padding-left: .4rem;
+}
+
+.rating-pro {
+    justify-content: start;
+    padding-left: .4rem;
+}
+
+.rating-pro small:nth-child(1) {
+    margin-right: .5rem;
+}
+
+.head {
+    padding-inline: 12px;
+    padding-block: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.home {
+    width: 280px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: var(--boxShadowFood);
+    margin-bottom: 1rem;
+}
+
+.address {
+    padding-inline: 1rem;
+    font-size: 12px;
+    color: var(--lightfray)
+}
+
+.address span {
+    padding-left: 5px;
+}
+
+.fa-phone {
+    padding-block: .7rem;
+}
+
+.home-address {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+}
+
+.payment-method {
+    padding-inline: .5rem;
+    padding-top: .5rem;
+}
+
+.payment {
+    width: 280px;
+    margin-inline: auto;
+    margin-block: 1.5rem;
+}
+
+.payment-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-block: .1rem;
+}
+
+.card img {
+    width: 30px;
+}
+
+.card span {
+    padding-left: 1rem;
+    font-size: 13px;
+}
+
+.wrap-delivery {
+    background-color: white;
+    padding-inline: 1rem;
+    border-radius: 15px;
+    padding-block: .75rem;
+    line-height: 1.5rem;
+}
+
+.wrap-delivery-child {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.wrap-delivery button {
+    text-align: center;
+    font-family: var(--fontFam);
+    width: 100%;
+    font-weight: 900;
+    font-size: 15px;
+    color: black;
+    border-radius: 15px;
+    padding-block: .5rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: var(--buttonBoxShadow);
+}
+
+.wrap-delivery button:hover {
+    background-color: var(--orangeColor);
+    color: white;
+}
+
+.wrap-delivery-child span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+
+
+
